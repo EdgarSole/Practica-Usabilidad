@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Unidad de medida aplicada a la tipografía */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white;
+}
+
+
+header {
+    width: 100%;
+    height: 150px; /* Medida fija en px */
+    background-color: #000; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; /* Control de contenido que sobrepasa el contenedor */
+    position: relative; /* Ejemplo de posición relativa */
+    z-index: 3; /* Z-index para ordenar jerarquía de elementos */
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: rgba(152, 130, 19, 0.9); /* Color con transparencia */
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    background-color: #393939; /* Sobrescritura de estilo mediante cascada */
+    position: absolute; /* Ejemplo de posición absoluta */
+    z-index: 2; /* Z-index aplicado */
+}
+section {
+    margin-bottom: 20px;
+}
+
+/* Article styles */
+article {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #565656; /* Aplicación de estilo con herencia forzada */
+    z-index: 1; /* Z-index menor para mantener jerarquía */
+}
+
+/* Anchor styles */
+a {
+    color: white;
+}
+a:hover {
+    color: yellow; /* Ejemplo de pseudoclase */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    position: fixed; /* Ejemplo de posición fija */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Selector de etiqueta */
+h2 {
+    color: lightblue;
+}
+
+/* Selector de clase */
+.enlace {
+    margin-left: 42%;
+    color: rgba(255, 255, 255, 0.8); /* Uso de color RGBA */
+}
+
+/* Selector de ID */
+#inicio {
+    text-align: center;
+    font-size: 1.2em; /* Unidad relativa */
+}
+
+/* Selector con atributo */
+input[type="text"] {
+    border: 2px solid #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Combinación de selectores */
+section#inicio p {
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Pseudoelemento */
+p::first-line {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    header {
+        height: 100px; /* Altura reducida en dispositivos más pequeños */
+    }
+    main {
+        display: none; /* Oculta el main en pantallas pequeñas */
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+input {
+    border: 2px solid #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    border: 2px solid #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+

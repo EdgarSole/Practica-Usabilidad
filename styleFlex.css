@@ -1,0 +1,167 @@
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: rgba(152, 130, 19, 0.9);
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    background-color: #393939;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Section with Flexbox */
+section {
+    display: flex; /* Aplicando Flexbox */
+    flex-direction: column; /* Los elementos se alinearán en columna (por defecto) */
+    justify-content: center; /* Alineación vertical */
+    align-items: center; /* Alineación horizontal */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #444; /* Fondo para visibilidad */
+}
+
+/* Article styles */
+article {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #565656;
+    z-index: 1;
+}
+
+/* Anchor styles */
+a {
+    color: white;
+}
+a:hover {
+    color: yellow;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Selector de etiqueta */
+h2 {
+    color: lightblue;
+}
+
+/* Selector de clase */
+.enlace {
+   margin-left: 37%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Selector de ID */
+#inicio {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Selector con atributo */
+input[type="text"] {
+    border: 2px solid #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Combinación de selectores */
+section#inicio p {
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Pseudoelemento */
+p::first-line {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+    main {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    /* Ajuste en el contenedor de la section para pantallas pequeñas */
+    section {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        justify-content: flex-start; /* Alineación vertical al inicio */
+        align-items: flex-start; /* Alineación horizontal al inicio */
+    }
+}
+
+/* Estilos de inputs y textareas */
+input, textarea {
+    border: 2px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaciado entre los inputs */
+    width: 80%; /* Asegura que los inputs se adapten al contenedor */
+}
+
+/* Ajuste de los inputs en pantallas pequeñas */
+@media (max-width: 480px) {
+    input, textarea {
+        width: 100%; /* Los inputs ocupan todo el ancho disponible */
+    }
+}

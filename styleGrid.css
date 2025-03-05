@@ -1,0 +1,193 @@
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background: rgba(152, 130, 19, 0.9);
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    background-color: #393939;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Section with Grid */
+section {
+    display: grid; /* Aplicamos Grid */
+    grid-template-columns: 1fr 1fr; /* Definimos dos columnas de tamaño igual */
+    grid-template-rows: auto; /* Las filas se ajustarán automáticamente */
+    grid-template-areas:
+        "header header"
+        "content content"; /* Definimos las áreas del grid */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #444;
+    justify-items: center; /* Alineación horizontal de los elementos dentro del grid */
+    align-items: center; /* Alineación vertical de los elementos dentro del grid */
+}
+
+/* Grid Element - header */
+section header {
+    grid-area: header; /* Asignamos esta área al header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+}
+
+/* Grid Element - content */
+section .content {
+    grid-area: content; /* Asignamos esta área al contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Asegura que el contenido esté centrado */
+}
+
+/* Article styles */
+article {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #565656;
+    z-index: 1;
+}
+
+/* Anchor styles */
+a {
+    color: white;
+}
+a:hover {
+    color: yellow;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Selector de etiqueta */
+h2 {
+    color: lightblue;
+}
+
+/* Selector de clase */
+.enlace {
+   margin-left: 37%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Selector de ID */
+#inicio {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Selector con atributo */
+input[type="text"] {
+    border: 2px solid #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Combinación de selectores */
+section#inicio p {
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Pseudoelemento */
+p::first-line {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+    main {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    /* Ajuste en el contenedor de la section para pantallas pequeñas */
+    section {
+        grid-template-columns: 1fr; /* Cambia la dirección a una sola columna */
+        grid-template-areas:
+            "header"
+            "content"; /* Ajuste de áreas */
+        gap: 15px;
+    }
+}
+
+/* Estilos de inputs y textareas */
+input, textarea {
+    border: 2px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+/* Ajuste de los inputs en pantallas pequeñas */
+@media (max-width: 480px) {
+    input, textarea {
+        width: 100%; /* Los inputs ocupan todo el ancho disponible */
+    }
+}
